@@ -21,12 +21,12 @@ s = shmat(sh_mem_id,NULL,0); // az osztott memóriához próbálunk hozzzáférn
 létrehozható: `int*x` ami indexelhető tömb lehet.
 
 ### Szemafor
-A kritikus szakasz lezárására, és a másik folyamat megkérdi, hogy beléphet-e és amíg az eredi folyamt fel nem engedi addig várakozik.
+A kritikus szakasz lezárására, és a másik folyamat megkérdi, hogy beléphet-e és amíg az eredi folyamat fel nem engedi addig várakozik.
 ````C
 semid = szemafor_letrehozas(argv[0],0); // sem state is down!!!
 ````
 Milyen állapotban jön létre a szemafor?
-Ha nyitottként jön létre akkor a következő folyamat le tudja zárni, csak a következő lehet író és olvasó is! Az kell zárja az osztott memóriát aki írni akar bele! HA végzett akkor kell a másiknak írni.
+Ha nyitottként jön létre akkor a következő folyamat le tudja zárni, csak a következő lehet író és olvasó is!__Az kell zárja az osztott memóriát aki írni akar bele!__ Ha végzett akkor kell a másiknak írni.
 `szemafor_letrehozas(argv[0],0)` jelen esetben zárva jön létre, a második `0` biztosítja.
 
 
