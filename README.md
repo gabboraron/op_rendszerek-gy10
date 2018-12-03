@@ -89,8 +89,11 @@ void szemafor_muvelet(int semid, int op){
 
 ### Fontosabb műveletek:
 Szemafor létrehozása: `semget(kulcs, szemaforok száma, jogosultság)`
+
 Szemafor beállítása: `semctl(semid,0,SETVAL,szemafor_ertek)`
+
 `ipcs` - linux parancs, kiírja ha valami gond van a törléssel, kiírja ha bennmaradt osztott memória, szemafor, üzenetsor.
+
 `ipcrm` - ezel törölhető az egyes ipcsvel meghatározott dolgokat. pl: `ipcrm -s szemafor_id`
 
 
